@@ -20,7 +20,7 @@ groupSubjectClass 			VARCHAR(255) 			NOT NULL,
 groupNumParticipants 	INT(45)		 				NOT NULL,
 isPrivate							BINARY 						NOT NULL, #isPrivate: Yes or No
 isFull								BINARY 						NOT NULL, #isFull: Yes or No
-user_create_time			TIMESTAMP				DEFAULT CURRENT_TIMESTAMP
+group_create_time			TIMESTAMP				DEFAULT CURRENT_TIMESTAMP
 );
 
 /*

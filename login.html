@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-      body {font-family: Arial, Helvetica, sans-serif;}
+      body {font-family: Arial, Helvetica, sans-serif;
+           text-align: center;
+}
       * {box-sizing: border-box}
       /* Full-width input fields */
       input[type=text], input[type=password] {
@@ -128,27 +130,22 @@
 
   </head>
   <body>
-  <header style="background-color:orange">  
-    <h1> CPSC 362 PROJECT </h1>
+  <header>  
+    <h1> Bubble</h1>
+<p> The Study Buddy Finder </p>
   </header>
  
     
     
-    <section>
-      <h3> Recent groups</h3>
-      <form>
-        <textarea></textarea>
-      </form>
-    </section>
 
 
-    <section style="padding-top:10px;">
+    <section style="padding-top:10px; margin-left: 42%;">
       <form>
         <h2>Login</h2>
         <label> USER: </label><br>
         <input type="text"><br><br>
         <label> PASSWORD: </label>
-        <input type="password"><br>
+        <input type="password"><br><br>
         <div style="text-align:center;"><span> New User?<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
           <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -197,10 +194,7 @@ window.onclick = function(event) {
     </section>
     
     
-    <section>
-      <h3> Bulletin Board</h3>
-      <textarea></textarea>
-    </section>
+
 
   </body>
 </html>

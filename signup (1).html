@@ -35,14 +35,23 @@ s<!DOCTYPE html>
         opacity:1;
       }
       /* Extra styles for the cancel button */
-      .cancelbtn {
+      .cancelbtn,.signupbtn {
         padding: 14px 20px;
+      }
+      
+      .cancelbtn{
         background-color: #f44336;
       }
+
+      .signupbtn{
+        background-color: #0cc865;
+      }
+      
       /* Float cancel and signup buttons and add an equal width */
       .cancelbtn, .signupbtn {
         float: left;
         width: 50%;
+        font-weight:bolder;
       }
       /* Add padding to container elements */
       .container {
@@ -153,8 +162,9 @@ s<!DOCTYPE html>
           <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
           <div class="clearfix">
-            <registerbutton type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</registerbutton>
-            <registerbutton type="button" onclick="window.location.href='New User.html'" class="signupbtn">Sign Up</registerbutton>
+            <input type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" value="Cancel">
+            
+        <input type="button" onclick="window.location.href='New User.html'" class="signupbtn" value="Sign Up">
           </div>
         </div>
       </form>

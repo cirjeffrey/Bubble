@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+	table{ border: 2px solid black;}
+	th, td{ padding: 5px;}
+  </style>
+  
+  <body>
+    <header>
+    <h1> Bulletin Board</h1> 
+    </header>
+	
+  <main>  
+	
+    <table>
+    <form>
+		<tr>
+			<th> Subject </th>
+			<th> Creator </th>
+			<th> Replies </th>
+		</tr>
+		
+		<tr>
+			<td> Book 4 Sale </td>
+			<td> Bob </td>
+			<td> 3 </td>
+			<td> <input type="button" value="View"> </td>
+		</tr>
+		
+		<tr>
+			<td> CPSC 362 Prof recommendations??? </td>
+			<td> Janet </td>
+			<td> 5 </td>
+			<td> <input type="button" value="View"> </td>
+		</tr>
+		
+		<tr>
+			<td> wuts gud to eat around csuf!? </td>
+			<td> Wilson </td>
+			<td> 10 </td>
+			<td> <input type="button" value="View"> </td>
+		</tr>
+		
+		<tr>
+			<td> help!!!!! </td>
+			<td> Becky </td>
+			<td> 0 </td>
+			<td> <input type="button" value="View"> </td>
+		</tr>
+		
+		<tr>
+			<td> Best nap spots? </td>
+			<td> Ivan </td>
+			<td> 21 </td>
+			<td> <input type="button" value="View"> </td>
+		</tr>
+		
+		<th>
+			<th align="center"> Have something to add? </th>			
+		</th>
+		
+		<tr>
+			<td><input type="button" value="Post New Thread" style="margin-left:100%;" onclick="window.location.href='PostNewThread.html'"> </td> 
+		</tr>
+		
+    </form>
+    </table>
+    </main>
+    </body>
+</html>

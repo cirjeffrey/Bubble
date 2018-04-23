@@ -129,13 +129,13 @@
 
 
     <section style="padding-top:10px; margin-left: 42%;">
-      <form>
+      <form class = "login" action = "includes/login.inc.php" method = "POST">
         <h2>Login</h2>
         <label> USER: </label><br>
-        <input type="text"><br><br>
+        <input type="text" name = "username"><br><br>
         <label> PASSWORD: </label>
-        <input type="password"><br><br>
-        <div style="text-align:center;"><span> New User?<input type="button" onclick="location.href='signup.html';" value="Sign Up" />
+        <input type="password" name = "password"><br><br>
+        <div style="text-align:center;"><span> New User?<input type="button" onclick="location.href='signup (1).html';" value="Sign Up" />
 
           
           
@@ -149,7 +149,7 @@
               }
             }
           </script>
-          <button> LOGIN </button>
+          <button type = "submit" name = "submit"> LOGIN </button>
           </div>
           </form>
         </section>

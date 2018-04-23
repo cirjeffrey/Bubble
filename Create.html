@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-    <h1> Create A Group</h1>  
+    <h1> LOGO</h1>  
     </header>
 
     <div class="dropdown">
@@ -40,24 +40,24 @@
 
   <main>  
     <table>
-    <form>
+    <form action = "includes/create.inc.php" method = "POST">
       <tr>
         <th><label> Subject/Class/Section </label> </th>
-        <td> <input type="text" value="subject"></td>
+        <td> <input type="text" value="subject" name = "subj"></td>
       </tr>
       
       <tr>
         <th><label> Group Name </label></th>
-        <td><input type="text" value="Group"></td>
+        <td><input type="text" value="Group" name = "gName"></td>
         </tr>
       
       <tr>
         <th> Number of Members</th>
-        <td><input type="number" value="subject"></td>
+        <td><input type="number" value="subject" name = "numMem"></td>
       </tr>
       <tr>
-        <th> Subject/Class/Section </th>
-        <td><input type="text" value="subject"> </td>
+        <th> Subject/Class/Section </th>  <!-- change to major -->
+        <td><input type="text" value="subject" name = "major"> </td>
       </tr>
     <tr>
       <th> Introduction</th>
@@ -80,15 +80,15 @@
       </tr>
       <tr>
         <th>Public</th>
-        <td> <input type="radio" name="pub/priv" value="private"></td>
+        <td> <input type="radio" name="priv" value="private"></td>
       </tr>  
       <tr>
         <th> Private </th>
-        <td> <input type="radio" name="pub/priv" value="public"></td>
+        <td> <input type="radio" name="pub" value="public"></td>
       </tr>
       
       <tr>
-        <td><input type="button" value="Create Group" style="margin-left:70%;"> </td> 
+        <td><input type="button" value="Create Group" style="margin-left:70%;"> </td> <!--need to change this to button type submit-->
       </tr>
 
     </form>

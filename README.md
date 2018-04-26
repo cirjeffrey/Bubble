@@ -25,9 +25,10 @@ This will take you to a page that looks similar to the image below
 
 ![49594bfed04249f792316505d5114a59](https://user-images.githubusercontent.com/31262157/39280508-a61419ea-48b4-11e8-86f9-efb450970566.png)
 
-### 5. In order for you to have the same database that is used by the php, you will first need to create a new database and name is “bubbleDB” Go ahead and click “New” located on the right of the phpmyadmin site. 
+### 5. In order for you to have the same database that is used by our php files, you will first need to create a new database and name it “bubbleDB”.
+- Go ahead and click “New” located on the left of the phpmyadmin site. 
 
-- Then fill out the “Database name” with “bubbleDB”  and showed in the image below and hit “create”
+- Then fill out the “Database name” with “bubbleDB” as showed in the image below then click “create”
  
 
 ![314bbc42de2239bbd7ed79dc018d2831](https://user-images.githubusercontent.com/31262157/39280560-e3f9695e-48b4-11e8-9726-3e861a677717.png)

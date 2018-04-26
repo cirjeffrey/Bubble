@@ -43,12 +43,12 @@ CREATE TABLE `buser` (
 -- Table structure for table `replies`
 --
 
-CREATE TABLE `replies` (
-  `reply_id` int(3) UNSIGNED NOT NULL,
-  `topic_id` int(3) UNSIGNED NOT NULL,
-  `author` varchar(16) NOT NULL,
-  `comment` text NOT NULL,
-  `date_posted` date NOT NULL
+CREATE TABLE replies (
+  reply_id int(3) UNSIGNED NOT NULL,
+  topic_id int(3) UNSIGNED NOT NULL,
+  author varchar(16) NOT NULL,
+  comment text NOT NULL,
+  date_posted date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

@@ -1,3 +1,12 @@
+<?php
+ session_start();
+ //redirect to login page if not logged in yet
+ if(!isset($_SESSION['u_id'])){
+  header("Location: ../login.html?please_log_in");
+  exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,7 +39,16 @@
     </header>
 
     <div class="dropdown">
-      <span>username</span>
+      <?php
+      if(isset($_SESSION['u_id'])){
+        $uid = $_SESSION['u_id'];
+        echo "<span>$uid</span>";
+      } else{
+        echo "<span>username</span>";
+      }
+      
+      ?>
+      <!-- <span>username</span> -->
       <div class="dropdown-content">
         <p>My Profile</p>
         <p>My Group</p>
@@ -45,7 +63,7 @@
         
         <input type="button" value="Create Study Group" onclick="window.location.href='Create.html'" />
         
-        <button value="bulletin"> View Bulletin Board</button>
+        <input type="button" value="View Bulletin Board" onclick="window.location.href='forum.php'" />
       
       
       </form>

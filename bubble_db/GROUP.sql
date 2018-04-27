@@ -9,19 +9,19 @@ SELECT * FROM bGroup WHERE idGroup;
 
 #NAME OF GROUP CREATOR
 #varchar 45
-SELECT * FROM bGroup WHERE groupCreator;
+SELECT * FROM bGroup WHERE groupCreator LIKE "%<search criteria>%";
 
 #GROUP MAJOR
 #varchar 45
-SELECT * FROM bGroup WHERE groupMajor;
+SELECT * FROM bGroup WHERE groupMajor LIKE "%<search criteria>%";
 
 #SUBJECT FOR GROUP
 #varchar 45
-SELECT * FROM bGroup WHERE groupSubjectClass;
+SELECT * FROM bGroup WHERE groupSubjectClass LIKE "%<search criteria>%";
 
 #NUMBER OF PARTICIPANTS
 #int 45
-SELECT * FROM bGroup WHERE groupNumParticipants;
+SELECT * FROM bGroup WHERE groupNumParticipants LIKE "%<search criteria>%";
 
  #IS GROUP PRIVATE
  #BINARY

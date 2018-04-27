@@ -5,6 +5,10 @@
   header("Location: ./login.html?please_log_in");
   exit();
  }
+
+ if(!isset($_POST['criteria'])){
+	$_POST['criteria'] = "empty";
+ }
 ?>
 
 <!DOCTYPE html>
@@ -27,50 +31,30 @@
 	
   <main>  
 	<div class="topnav">
-	<input type="text" placeholder="Search..">
+		<form action = "FindSG.php" method = "POST">
+			<!-- add some text here like search by class/major/creator -->
+			<input type="text" placeholder="Search..." name = "criteria"> <button type = "submit" name = "submit">Search</button>
+		</form>
 	</div>
     <table>
     <form>
+			
 		<tr>
 			<th> Class </th>
 			<th> Creator </th>
 			<th> Participants </th>
 		</tr>
+		<?php
+
+			//Display non full groups listed. allow narrowing down by criteria later.
 		
-		<tr>
-			<td> CPSC 315 </td>
-			<td> BOB </td>
-			<td> 1/4 </td>
-			<td> <input type="button" value="Join"> </td>
-		</tr>
+			include "includes/sc.inc.php";
+			
+		?>
 		
-		<tr>
-			<td> CPSC 362 </td>
-			<td> JANET </td>
-			<td> 3/4 </td>
-			<td> <input type="button" value="Join"> </td>
-		</tr>
 		
-		<tr>
-			<td> MATH 338 </td>
-			<td> DAVE </td>
-			<td> 5/6 </td>
-			<td> <input type="button" value="Join"> </td>
-		</tr>
 		
-		<tr>
-			<td> POSC 100 </td>
-			<td> WU </td>
-			<td> 1/6 </td>
-			<td> <input type="button" value="Join"> </td>
-		</tr>
 		
-		<tr>
-			<td> MATH 270A </td>
-			<td> IVAN </td>
-			<td> 1/6 </td>
-			<td> <input type="button" value="Join"> </td>
-		</tr>
 		
 		<th>
 			<th align="center"> Didn't find what you were looking for? </th>			

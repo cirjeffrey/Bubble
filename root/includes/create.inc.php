@@ -7,7 +7,7 @@
         // dont need this anymore $gid = "0000"; // temp group id make this auto increment
         $name = $_SESSION['u_name'];
         $subj = mysqli_real_escape_string($db_connection, $_POST['subj']);
-        $gName = mysqli_real_escape_string($db_connection, $_POST['gName']);
+        $gName = mysqli_real_escape_string($db_connection, $_POST['gName']); // not needed at the moment
         $numMem = mysqli_real_escape_string($db_connection, $_POST['numMem']);
         $major = mysqli_real_escape_string($db_connection, $_POST['major']);
         $private = mysqli_real_escape_string($db_connection, $_POST['pub/priv']);

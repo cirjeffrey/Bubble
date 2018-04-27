@@ -20,7 +20,7 @@ session_start();
             $result = mysqli_query($db_connection, $sql);
             $resultCheck = mysqli_num_rows($result);
             if($resultCheck < 1){
-                header("Location: ../login.html?login=wrongusername");
+                header("Location: ../login.html?login=error");
                 exit();
             }
             else{
@@ -29,7 +29,7 @@ session_start();
                     $hashedPwdCheck = password_verify($password, $row['userPassword']);
 
                     if($hashedPwdCheck == false){
-                        header("Location: ../login.html?login=wrongpassword");
+                        header("Location: ../login.html?login=error");
                         exit();
                     }
                     elseif($hashedPwdCheck == true){

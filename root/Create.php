@@ -1,3 +1,12 @@
+<?php
+ session_start();
+ //redirect to login page if not logged in yet
+ if(!isset($_SESSION['u_id'])){
+  header("Location: ./login.html?please_log_in");
+  exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,11 +39,15 @@
     </header>
 
     <div class="dropdown">
-      <span>username</span>
+      
+      <?php
+        $uid = $_SESSION['u_id'];
+        echo "<span>$uid</span>";
+      ?>
       <div class="dropdown-content">
-        <p>My Profile</p>
+        <a href="profile.php">My Profile</a>
         <p>My Group</p>
-        <p>Sign Out</p>
+        <a href="includes/logout.inc.php?signout=true">Sign Out</a>
       </div>
     </div>
 
@@ -56,7 +69,7 @@
         <td><input type="number" value="subject" name = "numMem"></td>
       </tr>
       <tr>
-        <th> Major </th>  <!-- change to major -->
+        <th> Major </th>
         <td><input type="text" value="subject" name = "major"> </td>
       </tr>
     <tr>
@@ -66,17 +79,17 @@
       
     <tr>
       <th> Location </th>
-        <td><input type="text" value="location"></td>
+        <td><input type="text" value="location" name = "meetingLocation"></td>
     </tr>
       
     <tr>
         <th> Date </th>
-        <td> <input type="date" value="date"></td>
+        <td> <input type="date" value="date" name = "meetingDate"></td>
     </tr>  
       
       <tr>
         <th> Time </th>
-        <td> <input type="Time" value="Time"></td>
+        <td> <input type="Time" value="Time" name = "meetingTime"></td>
       </tr>
       <tr>
         <th>Public</th>
@@ -88,7 +101,7 @@
       </tr>
       
       <tr>
-        <td><button type="submit" style="margin-left:70%;" name = "submit">Create Group</button> </td> <!--need to change this to button type submit-->
+        <td><button type="submit" style="margin-left:70%;" name = "submit">Create Group</button> </td>
       </tr>
 
     </form>

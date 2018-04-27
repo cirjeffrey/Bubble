@@ -1,3 +1,12 @@
+<?php
+ session_start();
+ //redirect to login page if not logged in yet
+ if(!isset($_SESSION['u_id'])){
+  header("Location: ./login.html?please_log_in");
+  exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,19 +85,30 @@
 
 <h2 style="text-align:Left">&nbsp&nbsp&nbspUser Profile
     <div class="dropdown">
-        <span>username</span>
+        <?php
+            $uid = $_SESSION['u_id'];
+            echo "<span>$uid</span>"
+        ?>
         <div class="dropdown-content">
-            <p>SearchGroup</p>
-            <p>CreateNewGroup</p>
-            <p>SignOut</p>
+            <a href="FindSG.php">SearchGroup</a>
+            <a href="Create.php">CreateNewGroup</a>
+            <a href="includes/logout.inc.php?signout=true">Sign Out</a>
         </div>
     </div>
 </h2>
 <div class="card">
     <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Userpic" style="width:100%">
-    <h1>Username</h1>
+    <?php
+        $uid = $_SESSION['u_id'];
+        echo "<h1>$uid</h1>"
+    ?>
+    
+    
     <p class="title">Freshman/Sophomore...etc</p>
-    <p>User's Major</p>
+    <?php
+        $major = $_SESSION['u_major'];
+        echo "<p>$major</p>"
+    ?>
     <P style="text-align:left">&nbsp&nbsp&nbspUser's Group:<br /></p>
     <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>
     <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>

@@ -2,7 +2,7 @@
  session_start();
  //redirect to login page if not logged in yet
  if(!isset($_SESSION['u_id'])){
-  header("Location: ../login.html?please_log_in");
+  header("Location: ./login.html?please_log_in");
   exit();
  }
 ?>
@@ -40,30 +40,25 @@
 
     <div class="dropdown">
       <?php
-      if(isset($_SESSION['u_id'])){
         $uid = $_SESSION['u_id'];
         echo "<span>$uid</span>";
-      } else{
-        echo "<span>username</span>";
-      }
-      
       ?>
-      <!-- <span>username</span> -->
+      <!-- change to a tags -->
       <div class="dropdown-content">
-        <p>My Profile</p>
+        <a href="profile.php">My Profile</a>
         <p>My Group</p>
-        <p>Sign Out</p>
+        <a href="includes/logout.inc.php?signout=true">Sign Out</a>
       </div>
     </div>
 
     <main>
       <form>
-        <input type="button" value="Find Study Group" onclick="window.location.href='findSG.html'" />
+        <input type="button" value="Find Study Group" onclick="window.location.href='FindSG.php'" />
         
         
-        <input type="button" value="Create Study Group" onclick="window.location.href='Create.html'" />
+        <input type="button" value="Create Study Group" onclick="window.location.href='Create.php'" />
         
-        <input type="button" value="View Bulletin Board" onclick="window.location.href='forum.php'" />
+        <input type="button" value="View Forum" onclick="window.location.href='forum.php'" />
       
       
       </form>

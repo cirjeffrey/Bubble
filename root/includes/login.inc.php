@@ -34,6 +34,7 @@ session_start();
                     }
                     elseif($hashedPwdCheck == true){
                         //Log in the user here
+                        //Store into global variables $_SESSION['...'] values from db at login
                         $_SESSION['u_id'] = $row['idUsername'];
                         $_SESSION['u_name'] = $row['userFullname'];
                         $_SESSION['u_email'] = $row['userEmail'];

@@ -1,3 +1,12 @@
+<?php
+ session_start();
+ //redirect to login page if not logged in yet
+ if(!isset($_SESSION['u_id'])){
+  header("Location: ./login.html?please_log_in");
+  exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,9 +22,13 @@
   
   <body>
     <header>
-    <h1> LOGO</h1>  
+    <h1> LOGO</h1> 
     </header>
+	
   <main>  
+	<div class="topnav">
+	<input type="text" placeholder="Search..">
+	</div>
     <table>
     <form>
 		<tr>
@@ -64,7 +77,7 @@
 		</th>
 		
 		<tr>
-			<td><input type="button" value="Create a Group" style="margin-left:240%;" onclick="window.location.href='Create.html'"> </td> 
+			<td><input type="button" value="Create a Group" style="margin-left:240%;" onclick="window.location.href='Create.php'"> </td> 
 		</tr>
 		
     </form>

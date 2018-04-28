@@ -25,21 +25,12 @@ This will take you to a page that looks similar to the image below
 
 ![49594bfed04249f792316505d5114a59](https://user-images.githubusercontent.com/31262157/39280508-a61419ea-48b4-11e8-86f9-efb450970566.png)
 
-### 5. In order for you to have the same database that is used by our php files, you will first need to create a new database and name it “bubbleDB”.
-- Go ahead and click “New” located on the left of the phpmyadmin site. 
+### 5. In order for you to have the same database that is used by our php files, you will first need to create a new database
+- Head over to this link https://github.com/cirjeffrey/LFG-CPSC-362/blob/master/bubble_db/bubble.sql
 
-- Then fill out the “Database name” with “bubbleDB” as showed in the image below then click “create”
- 
+- Simply copy and paste the code in the tab named SQL in phpMyAdmin
 
-![314bbc42de2239bbd7ed79dc018d2831](https://user-images.githubusercontent.com/31262157/39280560-e3f9695e-48b4-11e8-9726-3e861a677717.png)
-![55ca08dc0f6ae9c377a60ea8f292823b](https://user-images.githubusercontent.com/31262157/39280546-d7085e62-48b4-11e8-80cf-78ac03d49dba.png)
-
-
-### 6. Once the database is created you will need to import the sql code into the database. 
-- Head over to this link https://github.com/cirjeffrey/LFG-CPSC-362/blob/master/bubbledb.sql
-- Simply copy and paste the code and in phpMyAdmin click on bubbledb and click on the SQL tab.
-
-![47dd258657f16f21e72b6a2ea673be4f](https://user-images.githubusercontent.com/31262157/39280349-a4f5d270-48b3-11e8-88ca-193f4898b694.png)
+![screen shot 2018-04-27 at 6 51 07 pm](https://user-images.githubusercontent.com/31262157/39390646-66172e4c-4a4c-11e8-92a4-e24262965395.png)
 
 ### 7. Paste the code you copied earlier in the text box below and click go as shown in the bottom right of the image below.
 - You should be received with green messages saying the queries were a success.

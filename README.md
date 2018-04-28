@@ -41,10 +41,10 @@ This will take you to a page that looks similar to the image below
 
 ### 8. The only thing left to do is download the github repository.
 - https://github.com/cirjeffrey/LFG-CPSC-362
-
+- locate the "root" folder in the download of the github repository
 - Then you can search your computer for the “xampp” folder and in it locate the “htdocs” folder.
-- This is where the extraction of the github repository should go. 
+- This is where the root folder should go. 
 
 ### 9. Finally to access these files and show them in the browser. Simply head over to a new tab and type in localhost followed by the path of the file in htdocs.
-    - For example “localhost/bubble/login.php”
+     For example “localhost/root/login.html”
 

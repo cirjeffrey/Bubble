@@ -1,5 +1,6 @@
 <?php
  session_start();
+
  //redirect to login page if not logged in yet
  if(!isset($_SESSION['u_id'])){
   header("Location: ./login.html?please_log_in");
@@ -97,31 +98,17 @@
     </div>
 </h2>
 <div class="card">
-    <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Userpic" style="width:100%">
     <?php
         $uid = $_SESSION['u_id'];
         echo "<h1>$uid</h1>"
     ?>
     
-    
-    <p class="title">Freshman/Sophomore...etc</p>
+   
     <?php
         $major = $_SESSION['u_major'];
         echo "<p>$major</p>"
     ?>
-    <P style="text-align:left">&nbsp&nbsp&nbspUser's Group:<br /></p>
-    <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>
-    <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>
-    <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>
-    <p>&nbsp&nbsp&nbsp[Group&nbspName]&nbsp[unique&nbspgroup&nbspnumber][Name of Creator]&nbsp&nbsp&nbsp<button2>Quit&nbspGroup</button2></p>
 
-    <div style="margin: 24px 0;">
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
-    </div>
-    <p><button>Add Friend</button></p>
 </div>
 
 </body>

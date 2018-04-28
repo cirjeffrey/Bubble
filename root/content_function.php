@@ -13,7 +13,7 @@
 			
 			while ($row = mysqli_fetch_assoc($select)){
 				echo "<tr><td><a href='./readtopic.php?&tid=".$row['topic_id']."'>
-					".$row['title']."</a></td><td>".$row['author']."</td><td>".$row['date_posted']."</td><td>".$row['views']."</td>
+					".$row['title']."</a></td><td><a href='viewprofile.php?&username=".$row['author']."'>".$row['author']."</td><td>".$row['date_posted']."</td><td>".$row['views']."</td>
 					<td>".$row['replies']."</td></tr>";
 			}
 			echo "</table>";
@@ -32,7 +32,7 @@
 		$select = mysqli_query($db_connection, "SELECT topic_id, author, title, content, date_posted FROM 
 											topics WHERE ($tid = topics.topic_id)");
 		$row = mysqli_fetch_assoc($select);
-		echo nl2br("<div><h2>".$row['title']."</h2><p>".$row['author']."\n".$row['date_posted']."</p></div>");
+		echo nl2br("<div><h2>".$row['title']."</h2><p><a href='viewprofile.php?&username=".$row['author']."'>".$row['author']."</a> \n".$row['date_posted']."</p></div>");
 		echo "<div><p>".$row['content']."</p></div>";
 	}
 	

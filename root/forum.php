@@ -1,5 +1,11 @@
 <?php	
+	session_start();
 	include ('content_function.php');
+	
+	if(!isset($_SESSION['u_id'])){
+	header("Location: ./login.html?please_log_in");
+	exit();
+ }
 	
 ?>
 
@@ -14,11 +20,11 @@
 	</div>
 	
 	<?php
-		#check if user is logged in
-		#if(isset($_SESSION['username']))
-		#{
+		$uid = $_SESSION['u_id'];
+		if(isset($_SESSION['u_id']))
+		{
 			echo "<div><p><a href='newtopic.php?'> add a new topic </a></p></div>";
-		#}
+		}
 	?>
 		
 

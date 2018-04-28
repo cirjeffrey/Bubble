@@ -1,4 +1,5 @@
 <?php	
+	session_start();
 	include ('content_function.php');
 	addview($_GET['tid']);
 	

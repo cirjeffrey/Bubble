@@ -1,4 +1,5 @@
 <?php	
+	session_start();
 	include ('content_function.php');
 ?>
 
@@ -10,14 +11,20 @@
 		
 		<div>
 			<?php 
-				#check for user to be logged in
-				echo "<form action='addnewtopic.php?' method='POST'>
+				if(!isset($_SESSION['u_id']))
+				{
+					header("Location: ./login.html?please_log_in");
+					exit();
+				}
+				else
+				{
+					echo "<form action='addnewtopic.php?' method='POST'>
 						<p>Title: </p>
 						<input type='text' id='topic' name='topic' size='95' />
 						<p>Content: </p>
 						<textarea cols='110' rows='10' id='content' name='content'></textarea><br />
 						<input type='submit' value='add new post' /></form>";
-						
+				}
 				#else if user not loggin in
 				#send to login or register.
 			?>

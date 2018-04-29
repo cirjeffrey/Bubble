@@ -97,8 +97,8 @@ Create join table
 CREATE TABLE bJoin (
     idGroup int(16) UNSIGNED NOT NULL,
     idUsername varchar(16) NOT NULL,
-    joinid int UNSIGNED NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY (joinid),
+    join_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (join_time),
     FOREIGN KEY (idGroup) REFERENCES bgroup(idGroup),
     FOREIGN KEY (idUsername) REFERENCES buser(idUsername)
 );

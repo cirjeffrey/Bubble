@@ -7,7 +7,7 @@
  }
 
  if(!isset($_POST['join'])){
-     header("Location: ./FindSG.php?error");
+     header("Location: ../FindSG.php?error");
      exit();
  }
 
@@ -17,10 +17,22 @@
  //get user id to store in join table
     $uid = $_SESSION['u_id'];
 
-    $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$gid','$uid');";
-    mysqli_query($db_connection, $sql);
-    //echo $sql;
-    #header("Location: ../profile.php?GroupJoined");
-    header("Location: ../viewgroup.php?gid=".$gid."");
-    exit();
+    //check if user already joined the group
+    // 
+    $sql = "SELECT * FROM bjoin WHERE idUsername = '$uid' AND idGroup = '$gid';";
+    $result = mysqli_query($db_connection, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if($resultCheck > 0){
+        header("Location: ../FindSG.php?already_joined_group");
+        exit();
+    }
+    else{
+        $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$gid','$uid');";
+        mysqli_query($db_connection, $sql);
+        //echo $sql;
+        #header("Location: ../profile.php?GroupJoined");
+        header("Location: ../viewgroup.php?gid=".$gid."");
+        exit();
+    }
+    
 ?>

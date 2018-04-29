@@ -113,7 +113,7 @@
         <?php
             include_once "includes/dbh.inc.php";
             $uid = $_SESSION['u_id'];
-            $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup;";
+            $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup ORDER BY join_time DESC";
             $select = mysqli_query($db_connection, $sql);
             while($row = mysqli_fetch_assoc($select)){
                 echo "<p>[".$row['idGroup']."]&nbsp[".$row['groupCreator']."]&nbsp&nbsp&nbsp<button>Quit&nbspGroup</button></p>";

@@ -15,14 +15,17 @@ include "dbh.inc.php";
 
 			
 	    while($row = mysqli_fetch_assoc($select)){
-		    //this needs to be styled
-		    echo "
+			//this needs to be styled
+			$gid = $row['idGroup'];
+			echo "
+			
 			    <tr>
 				    <td> ".$row['groupSubjectClass']." </td>
 				    <td> ".$row['groupCreator']." </td>
 				    <td> ".$row['groupNumParticipants']." </td>
-				    <td> <input type='button' value='Join'> </td>
-			    </tr>
+				    <td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
+				</tr>
+			
 		    ";
 				
 	    }
@@ -38,12 +41,13 @@ include "dbh.inc.php";
 			if($counter >= 5){
 				break;
 			}
+			$gid = $row['idGroup'];
 			echo "
 				<tr>
 					<td> ".$row['groupSubjectClass']." </td>
 					<td> ".$row['groupCreator']." </td>
 					<td> ".$row['groupNumParticipants']." </td>
-					<td> <input type='button' value='Join'> </td>
+					<td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
 				</tr>
 			";
 			$counter++;

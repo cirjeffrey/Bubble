@@ -37,21 +37,22 @@
 		</form>
 	</div>
     <table>
-    <form>
+    <form action = "includes/join.inc.php" method = "POST">
 			
 		<tr>
 			<th> Class </th>
 			<th> Creator </th>
 			<th> Participants </th>
 		</tr>
+		
 		<?php
 
-			//Display non full groups listed. allow narrowing down by criteria later.
+			//Display non full groups listed.
 		
 			include "includes/sc.inc.php";
 			
 		?>
-		
+	
 		
 		
 		
@@ -63,6 +64,7 @@
 		<tr>
 			<td><input type="button" value="Create a Group" style="margin-left:240%;" onclick="window.location.href='Create.php'"> </td> 
 		</tr>
+
 		
     </form>
     </table>

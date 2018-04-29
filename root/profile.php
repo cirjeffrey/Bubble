@@ -108,6 +108,22 @@
         $major = $_SESSION['u_major'];
         echo "<p>$major</p>"
     ?>
+    <div>
+        <p>Groups Joined:</p>
+        <?php
+            include_once "includes/dbh.inc.php";
+            $uid = $_SESSION['u_id'];
+            $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup;";
+            $select = mysqli_query($db_connection, $sql);
+            while($row = mysqli_fetch_assoc($select)){
+                echo "<p>&nbsp&nbsp&nbsp[".$row['idGroup']."]&nbsp[".$row['groupCreator']."]&nbsp&nbsp&nbsp<button>Quit&nbspGroup</button></p>";
+            }
+            
+        ?>
+        
+        
+
+    </div>
 
 </div>
 

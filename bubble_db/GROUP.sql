@@ -30,3 +30,6 @@ SELECT * FROM bGroup WHERE groupNumParticipants LIKE "%<search criteria>%";
  #IS GROUP FULL
  #BINARY
  SELECT * FROM bGroup WHERE isFull;
+
+#Select all joined groups
+Select * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = $uid AND bjoin.idGroup = bgroup.idGroup;

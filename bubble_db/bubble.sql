@@ -90,6 +90,19 @@ ALTER TABLE `replies`
   ADD CONSTRAINT `replies_ibfk_2` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`topic_id`);
 COMMIT;
 
+
+/*
+Create join table
+*/
+CREATE TABLE bJoin (
+    idGroup int(16) UNSIGNED NOT NULL,
+    idUsername varchar(16) NOT NULL,
+    joinid int UNSIGNED NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (joinid),
+    FOREIGN KEY (idGroup) REFERENCES bgroup(idGroup),
+    FOREIGN KEY (idUsername) REFERENCES buser(idUsername)
+);
+
 /*
 TESTING CODE
 ------------------------------

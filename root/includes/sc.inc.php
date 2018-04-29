@@ -23,7 +23,7 @@ include "dbh.inc.php";
 				    <td> ".$row['groupSubjectClass']." </td>
 				    <td> ".$row['groupCreator']." </td>
 				    <td> ".$row['groupNumParticipants']." </td>
-				    <td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
+					<td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
 				</tr>
 			
 		    ";

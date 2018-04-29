@@ -44,7 +44,7 @@
                 $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$current_group_id','$uid');";
                 mysqli_query($db_connection, $sql);
                 //try to link this to the viewgroups page
-                header("Location: ../Create.php?groupCreated");
+                header("Location: ../viewgroup.php?gid=".$gid."");
                 exit();
             
         }

@@ -23,7 +23,7 @@
         //Error handlers
         //Check for empty fields
         if(empty($subj) || empty($gName) || empty($numMem) || empty($major)){
-            header("Location: ../Create.html?create=empty");
+            header("Location: ../Create.php?create=empty");
             exit();
         }
         else{
@@ -31,16 +31,25 @@
             //for checking name field !preg_match("/^[a-zA-Z]*$/", $name)
             
                 $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull) 
-                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0');"; // isFull = 0 because group is never full when newly created; priv = 0 for now
+                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0');"; // isFull = 0 because group is never full when newly created
                 //$result = mysqli_query($db_connection, $sql);
                 //$resultCheck = mysqli_num_rows($result);
                 mysqli_query($db_connection, $sql);
-                header("Location: ../index.php?groupCreated");
+
+                $current_group_id = mysqli_query($db_connection, "SELECT MAX(idGroup) FROM bgroup;");
+                $row = mysqli_fetch_assoc($current_group_id);
+                $current_group_id = $row['MAX(idGroup)'];
+                //$current_group_id = $row['idGroup'];
+                $uid = $_SESSION['u_id'];
+                $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$current_group_id','$uid');";
+                mysqli_query($db_connection, $sql);
+                //try to link this to the viewgroups page
+                header("Location: ../Create.php?groupCreated");
                 exit();
             
         }
     }
     else{
-        header("Location: ../Create.html?error");
+        header("Location: ../Create.php?error");
         exit();
     }

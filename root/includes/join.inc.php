@@ -20,6 +20,7 @@
     $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$gid','$uid');";
     mysqli_query($db_connection, $sql);
     //echo $sql;
-    header("Location: ../profile.php?GroupJoined");
+    #header("Location: ../profile.php?GroupJoined");
+    header("Location: ../viewgroup.php?gid=".$gid."");
     exit();
 ?>

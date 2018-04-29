@@ -1,6 +1,6 @@
 <?php
  session_start();
-
+ $group = $_GET['gid'];
  //redirect to login page if not logged in yet
  if(!isset($_SESSION['u_id'])){
   header("Location: ./login.html?please_log_in");
@@ -84,7 +84,7 @@
 </head>
 <body>
 
-<h2 style="text-align:Left">&nbsp&nbsp&nbspUser Profile
+<h2 style="text-align:Left">&nbsp&nbsp&nbsp Group Page
     <div class="dropdown">
         <?php
             $uid = $_SESSION['u_id'];
@@ -98,27 +98,35 @@
     </div>
 </h2>
 <div class="card">
-    <?php
-        $uid = $_SESSION['u_id'];
-        echo "<h1>$uid</h1>"
-    ?>
-    
-   
-    <?php
-        $major = $_SESSION['u_major'];
-        echo "<p>$major</p>"
-    ?>
-    <div>
-        <p>Groups Joined:</p>
+   <div>
+      
         <?php
             include_once "includes/dbh.inc.php";
-            $uid = $_SESSION['u_id'];
-            $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup;";
-            $select = mysqli_query($db_connection, $sql);
-            while($row = mysqli_fetch_assoc($select)){
-                echo "<p>[".$row['idGroup']."]&nbsp[".$row['groupCreator']."]&nbsp&nbsp&nbsp<button>Quit&nbspGroup</button></p>";
-            }
-            
+			$sql = mysqli_query($db_connection, "SELECT idGroup, groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, group_create_time FROM bgroup WHERE idGroup =".$group."");
+			$row = mysqli_fetch_assoc($sql);
+			
+			echo nl2br("<div><tr>
+					<td>Group Subject:".$row['groupSubjectClass']."\n </td>
+					<td>Group Creator:".$row['groupCreator']."\n </td>
+					<td>Group Major:".$row['groupMajor']."\n </td>
+					<td>Number of Participants:".$row['groupNumParticipants']."\n </td>
+					<td>Date Created:".$row['group_create_time']."\n </td>
+				</tr></div>");
+				
+			$participants = mysqli_query($db_connection, "SELECT idUsername FROM bjoin WHERE idGroup =".$group."");
+			
+			echo "<h2>Participants</h2>";
+			
+			if (mysqli_num_rows($participants) != 0)
+			{	
+				echo "<div>";
+				while($result = mysqli_fetch_assoc($participants))
+				{
+					echo nl2br("<div>".$result['idUsername']."</div>");
+				}
+				echo "</div>";
+				
+			}
         ?>
         
         

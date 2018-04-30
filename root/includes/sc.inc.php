@@ -24,6 +24,7 @@ include "dbh.inc.php";
 				    <td> ".$row['groupSubjectClass']." </td>
 				    <td> ".$row['groupCreator']." </td>
 				    <td> ".$row['groupNumParticipants']." </td>
+					<form action = 'viewgroup.php?gid=$gid' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>VIEW</button> </td></form>
 					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>
 				</tr>
 			
@@ -50,6 +51,7 @@ include "dbh.inc.php";
 					<td> ".$row['groupSubjectClass']." </td>
 					<td> ".$row['groupCreator']." </td>
 					<td> ".$row['groupNumParticipants']." </td>
+					<form action = 'viewgroup.php?gid=$gid' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>VIEW</button> </td></form>
 					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>
 				</tr>
 			";

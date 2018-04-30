@@ -37,7 +37,7 @@
 		</form>
 	</div>
     <table>
-    <form action = "includes/join.inc.php" method = "POST">
+    <!--<form action = "includes/join.inc.php" method = "POST">-->
 			
 		<tr>
 			<th> Class </th>
@@ -66,7 +66,7 @@
 		</tr>
 
 		
-    </form>
+    <!--</form>-->
     </table>
     </main>
     </body>

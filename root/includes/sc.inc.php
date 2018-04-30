@@ -17,13 +17,14 @@ include "dbh.inc.php";
 	    while($row = mysqli_fetch_assoc($select)){
 			//this needs to be styled
 			$gid = $row['idGroup'];
+			// copy the form part at end to add another button, change button name so u can access $_POST['buttonName'] on another php. also edit the action to link to the php to use.
 			echo "
 			
 			    <tr>
 				    <td> ".$row['groupSubjectClass']." </td>
 				    <td> ".$row['groupCreator']." </td>
 				    <td> ".$row['groupNumParticipants']." </td>
-					<td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
+					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>
 				</tr>
 			
 		    ";
@@ -42,12 +43,14 @@ include "dbh.inc.php";
 				break;
 			}
 			$gid = $row['idGroup'];
+			// copy the form part at end to add another button, change button name so u can access $_POST['buttonName'] on another php. also edit the action to link to the php to use.
 			echo "
+			
 				<tr>
 					<td> ".$row['groupSubjectClass']." </td>
 					<td> ".$row['groupCreator']." </td>
 					<td> ".$row['groupNumParticipants']." </td>
-					<td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td>
+					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>
 				</tr>
 			";
 			$counter++;

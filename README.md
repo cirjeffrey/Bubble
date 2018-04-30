@@ -2,6 +2,9 @@
 
 ## Bubble Install Document
 
+Our final slides for Bubble Project
+https://docs.google.com/document/d/1GbJeHSzBCBBQyNxXJE0nLiJhj41S_tFKlIQ7JMO0rXk/edit?usp=sharing
+
 Since our website uses databases, php is needed to connect the database along with the front end of the website. In order to run files with php extension, an apache server is needed. 
 
 ### 1. Head over to https://www.apachefriends.org/index.html and install xampp

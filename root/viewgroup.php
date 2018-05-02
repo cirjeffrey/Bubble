@@ -127,10 +127,12 @@
 				echo "</div>";
 				
 			}
+			
+			echo "<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$group'>JOIN</button> </td></form>";
+     
         ?>
-        
-        
-
+		
+		
     </div>
 
 </div>

@@ -31,7 +31,7 @@
 	<?php 
 			
 		#if user is logged in
-		if(!sset($_SESSION['u_id']))
+		if(!isset($_SESSION['u_id']))
 		{
 			replytopost($_GET['tid']);
 		}

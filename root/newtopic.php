@@ -20,9 +20,9 @@
 				{
 					echo "<form action='addnewtopic.php?' method='POST'>
 						<p>Title: </p>
-						<input type='text' id='topic' name='topic' size='95' />
+						<input type='text' id='topic' name='topic' size='95' required/>
 						<p>Content: </p>
-						<textarea cols='110' rows='10' id='content' name='content'></textarea><br />
+						<textarea cols='110' rows='10' id='content' name='content' required></textarea><br />
 						<input type='submit' value='add new post' /></form>";
 				}
 				#else if user not loggin in

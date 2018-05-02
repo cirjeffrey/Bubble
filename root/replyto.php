@@ -15,7 +15,11 @@
 	<?php
 		#if user is not logged in
 			#echo log in first
-		
+		if(!isset($_SESSION['u_id']))
+				{
+					header("Location: ./login.html?please_log_in");
+					exit();
+				}
 	?>
 	</div>
 	<div>
@@ -27,8 +31,10 @@
 	<?php 
 			
 		#if user is logged in
-		replytopost($_GET['tid']);
-		
+		if(!sset($_SESSION['u_id']))
+		{
+			replytopost($_GET['tid']);
+		}
 	?>
 	</div>
 </body>

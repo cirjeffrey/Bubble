@@ -51,7 +51,7 @@
 	{
 		echo "<div><form action='./addreply.php?tid=".$tid."' method='POST'>
 				<p>Comment: </p>
-				<textarea cols='80' rows='5' id='comment' name='comment'></textarea><br />
+				<textarea cols='80' rows='5' id='comment' name='comment' required></textarea><br />
 				<input type='submit' value='add comment' />
 				</form></div>";
 	}

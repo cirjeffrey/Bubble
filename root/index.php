@@ -37,19 +37,42 @@
     <header>
       <h1> logo</h1>
     </header>
-
-    <div class="dropdown">
+    <!--
+<div class="dropdown">
       <?php
         $uid = $_SESSION['u_id'];
         echo "<span>$uid</span>";
       ?>
-      <!-- change to a tags -->
+      
       <div class="dropdown-content">
         <a href="profile.php">My Profile</a>
         <p>My Group</p>
         <a href="includes/logout.inc.php?signout=true">Sign Out</a>
       </div>
     </div>
+
+    -->
+    
+
+    <!--Copy this into index, create, find, forum, and maybe profile-->
+<ul>
+    <li><a class="active" href="index.php">Home</a></li>
+    <li><a href="forum.php">Bulletin Board</a></li>
+    <li><a href="FindSG.php">Find Group</a></li>
+    <li><a href="#editGroup">Edit My Group</a></li>
+    <li><a href="#about">About</a></li>
+    <div style="float:right" class="dropdown">
+        <?php
+        $uid = $_SESSION['u_id'];
+        echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+        ?>
+        <div class="dropdown-content">
+            <a href="profile.php">My Profile</a>
+            <a href="#editProfile">Edit My Profile</a>
+            <a href="includes/logout.inc.php?signout=true">Log out</a>
+        </div>
+    </div>
+</ul>
 
     <main>
       <form>

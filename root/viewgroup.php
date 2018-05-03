@@ -102,15 +102,16 @@
       
         <?php
             include_once "includes/dbh.inc.php";
-			$sql = mysqli_query($db_connection, "SELECT idGroup, groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, group_create_time FROM bgroup WHERE idGroup =".$group."");
+			$sql = mysqli_query($db_connection, "SELECT * FROM bgroup WHERE idGroup =".$group."");
 			$row = mysqli_fetch_assoc($sql);
 			
 			echo nl2br("<div><tr>
-					<td>Group Subject:".$row['groupSubjectClass']."\n </td>
-					<td>Group Creator:".$row['groupCreator']."\n </td>
-					<td>Group Major:".$row['groupMajor']."\n </td>
-					<td>Number of Participants:".$row['groupNumParticipants']."\n </td>
-					<td>Date Created:".$row['group_create_time']."\n </td>
+					<td><b>Group Subject: </b>".$row['groupSubjectClass']."\n </td>
+					<td><b>Group Creator: </b>".$row['groupCreator']."\n </td>
+					<td><b>Group Major: </b>".$row['groupMajor']."\n </td>
+					<td><b>Number of Participants: </b>".$row['groupNumParticipants']."\n </td>
+					<td><b>Description: </b>".$row['groupDescription']."\n </td>
+					<td><b>Date Created: </b>".$row['group_create_time']."\n </td>
 				</tr></div>");
 				
 			$participants = mysqli_query($db_connection, "SELECT idUsername FROM bjoin WHERE idGroup =".$group."");
@@ -127,10 +128,12 @@
 				echo "</div>";
 				
 			}
+			
+			echo "<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$group'>JOIN</button> </td></form>";
+     
         ?>
-        
-        
-
+		
+		
     </div>
 
 </div>

@@ -1,9 +1,19 @@
+<?php
+ session_start();
+ //redirect to login page if not logged in yet
+ if(!isset($_SESSION['u_id'])){
+  header("Location: ./login.html?please_log_in");
+  exit();
+ }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>navigator</title>
     <meta charset="utf-8">
-    <!-- Please move all styling to style.css -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- Please move all styling to style.css 
     <style>
         ul{
             list-style-type:none;
@@ -53,7 +63,7 @@
             display:block;
         }
     </style>
-    <!--______________________________________-->
+    ______________________________________-->
 </head>
 <body>
 <!--Copy this into index, create, find, forum, and maybe profile-->
@@ -65,7 +75,6 @@
         <li><a href="#about">About</a></li>
         <div style="float:right" class="dropdown">
             <?php
-            session_start();
             $uid = $_SESSION['u_id'];
             echo "<a href='profile.php' class='dropbtn'>$uid</a>";
             ?>

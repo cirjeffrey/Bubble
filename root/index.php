@@ -10,10 +10,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Made with Thimble</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1"/> Commented this out and nothing changes, if not needed: delete-->
+    
+    <!-- Keeping this here for reference for css team delete if not needed
     <style>
       .dropdown {
         position: relative;
@@ -32,47 +34,34 @@
         display: block;
       }
     </style>
+    -->
   </head>
   <body>
     <header>
       <h1> logo</h1>
     </header>
-    <!--
-<div class="dropdown">
-      <?php
-        $uid = $_SESSION['u_id'];
-        echo "<span>$uid</span>";
-      ?>
-      
-      <div class="dropdown-content">
-        <a href="profile.php">My Profile</a>
-        <p>My Group</p>
-        <a href="includes/logout.inc.php?signout=true">Sign Out</a>
-      </div>
-    </div>
-
-    -->
+    
     
 
     <!--Copy this into index, create, find, forum, and maybe profile-->
-<ul>
-    <li><a class="active" href="index.php">Home</a></li>
-    <li><a href="forum.php">Bulletin Board</a></li>
-    <li><a href="FindSG.php">Find Group</a></li>
-    <li><a href="#editGroup">Edit My Group</a></li>
-    <li><a href="#about">About</a></li>
-    <div style="float:right" class="dropdown">
-        <?php
-        $uid = $_SESSION['u_id'];
-        echo "<a href='profile.php' class='dropbtn'>$uid</a>";
-        ?>
-        <div class="dropdown-content">
-            <a href="profile.php">My Profile</a>
-            <a href="#editProfile">Edit My Profile</a>
-            <a href="includes/logout.inc.php?signout=true">Log out</a>
+    <ul>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="forum.php">Bulletin Board</a></li>
+        <li><a href="FindSG.php">Find Group</a></li>
+        <li><a href="#editGroup">Edit My Group</a></li>
+        <li><a href="#about">About</a></li>
+        <div style="float:right" class="dropdown">
+            <?php
+            $uid = $_SESSION['u_id'];
+            echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+            ?>
+            <div class="dropdown-content">
+                <a href="profile.php">My Profile</a>
+                <a href="#editProfile">Edit My Profile</a>
+                <a href="includes/logout.inc.php?signout=true">Log out</a>
+            </div>
         </div>
-    </div>
-</ul>
+    </ul>
 
     <main>
       <form>

@@ -10,13 +10,6 @@
         $gName = mysqli_real_escape_string($db_connection, $_POST['gName']); // not needed at the moment
         $numMem = mysqli_real_escape_string($db_connection, $_POST['numMem']);
         $major = mysqli_real_escape_string($db_connection, $_POST['major']);
-        $meetingLocation= mysqli_real_escape_string($db_connection, $_POST['meetingLocation']);
-        $groupDescription= mysqli_real_escape_string($db_connection, $_POST['groupDescription']);
-		$meetingTime = mysqli_real_escape_string($db_connection, $_POST['meetingTime']);
-        $meetingDate= mysqli_real_escape_string($db_connection, $_POST['meetingDate']);
-       
-		
-		
         $private = mysqli_real_escape_string($db_connection, $_POST['pub/priv']);
         $isPrivate;
 
@@ -26,9 +19,7 @@
         else{
             $isPrivate = 0;
         }
-		//Convert input time to mysql time
-		//
-		//=================================
+
         //Error handlers
         //Check for empty fields
         if(empty($subj) || empty($gName) || empty($numMem) || empty($major)){
@@ -39,8 +30,8 @@
             //Check if input characters are valid
             //for checking name field !preg_match("/^[a-zA-Z]*$/", $name)
             
-                $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull, groupLocation, groupDescription) 
-                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0', '$meetingLocation', '$groupDescription');"; // isFull = 0 because group is never full when newly created
+                $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull) 
+                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0');"; // isFull = 0 because group is never full when newly created
                 //$result = mysqli_query($db_connection, $sql);
                 //$resultCheck = mysqli_num_rows($result);
                 mysqli_query($db_connection, $sql);
@@ -53,7 +44,7 @@
                 $sql = "INSERT INTO bjoin (idGroup, idUsername) VALUES ('$current_group_id','$uid');";
                 mysqli_query($db_connection, $sql);
                 //try to link this to the viewgroups page
-                header("Location: ../viewgroup.php?gid=".$current_group_id ."");
+                header("Location: ../viewgroup.php?gid=".$gid."");
                 exit();
             
         }

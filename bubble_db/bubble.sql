@@ -27,9 +27,6 @@ groupCreator VARCHAR(45) NOT NULL,
 groupMajor VARCHAR(45) NOT NULL,
 groupSubjectClass VARCHAR(255) NOT NULL,
 groupNumParticipants INT(45) NOT NULL,
-groupDescription text NOT NULL,
-groupLocation varchar(95) NOT NULL,
-`groupTimeMeetup` date NOT NULL,
 isPrivate BINARY NOT NULL, #isPrivate: Yes or No
 isFull BINARY NOT NULL, #isFull: Yes or No
 group_create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -106,3 +103,17 @@ CREATE TABLE bJoin (
     FOREIGN KEY (idUsername) REFERENCES buser(idUsername)
 );
 
+/*
+TESTING CODE
+------------------------------
+#INSERTS IN TABLE
+(idUsername, userFullname, userEmail, userPassword, userMAjor) 
+VALUES
+("username", "Robert Gama","email@gmail.com",  "Password", "Computer Science");
+
+SHOW tables; #SHOWS TABLES CREATED
+
+select * from bUser; #SHOWS DATA IN TABLE
+
+TRUNCATE TABLE bUser; #DELETES ALL DATA IN TABLE
+*/

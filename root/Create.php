@@ -84,12 +84,12 @@
       
     <tr>
         <th> Date </th>
-        <td> <input type="date" value="date" name = "meetingDate" required></td>
+        <td> <input type="date" Placeholder="Date" name = "meetingDate" required></td>
     </tr>  
       
       <tr>
         <th> Time </th>
-        <td> <input type="time" value="time" name = "meetingTime" required></td>
+        <td> <input type="time" Placeholder="Time" name = "meetingTime" required></td>
       </tr>
       <tr>
         <th>Public</th>

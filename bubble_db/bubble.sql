@@ -29,6 +29,7 @@ groupSubjectClass VARCHAR(255) NOT NULL,
 groupNumParticipants INT(45) NOT NULL,
 groupDescription text NOT NULL,
 groupLocation varchar(95) NOT NULL,
+meetingDateTime DATETIME NOT NULL,
 isPrivate BINARY NOT NULL, #isPrivate: Yes or No
 isFull BINARY NOT NULL, #isFull: Yes or No
 group_create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP

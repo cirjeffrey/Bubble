@@ -14,6 +14,8 @@
         $isPrivate;
         $date = mysqli_real_escape_string($db_connection, $_POST['meetingDate']);
         $time = mysqli_real_escape_string($db_connection, $_POST['meetingTime']);
+        $description = mysqli_real_escape_string($db_connection, $_POST['groupDescription']);
+        $location = mysqli_real_escape_string($db_connection, $_POST['meetingLocation']);
         //echo "$date $time";
         
 
@@ -34,8 +36,8 @@
             //Check if input characters are valid
             //for checking name field !preg_match("/^[a-zA-Z]*$/", $name)
             
-                $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull, meetingDateTime) 
-                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0', '$date $time');"; // isFull = 0 because group is never full when newly created
+                $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull, meetingDateTime, groupDescription, groupLocation) 
+                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0', '$date $time', '$description', '$location');"; // isFull = 0 because group is never full when newly created
                 //$result = mysqli_query($db_connection, $sql);
                 //$resultCheck = mysqli_num_rows($result);
                 mysqli_query($db_connection, $sql);

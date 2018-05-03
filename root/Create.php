@@ -89,7 +89,7 @@
       
       <tr>
         <th> Time </th>
-        <td> <input type="Time" value="Time" name = "meetingTime" required></td>
+        <td> <input type="time" value="time" name = "meetingTime" required></td>
       </tr>
       <tr>
         <th>Public</th>

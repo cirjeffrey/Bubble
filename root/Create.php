@@ -56,40 +56,40 @@
     <form action = "includes/create.inc.php" method = "POST">
       <tr>
         <th><label> Subject/Class/Section </label> </th>
-        <td> <input type="text" value="subject" name = "subj"></td>
+        <td> <input type="text" placeholder="Subject" name = "subj" required></td>
       </tr>
       
       <tr>
         <th><label> Group Name </label></th>
-        <td><input type="text" value="Group" name = "gName"></td>
+        <td><input type="text" placeholder="Group" name = "gName" required></td>
         </tr>
       
       <tr>
         <th> Number of Members</th>
-        <td><input type="number" value="subject" name = "numMem"></td>
+        <td><input type="number" min="0" max="10" placeholder="0" name = "numMem" required></td>
       </tr>
       <tr>
         <th> Major </th>
-        <td><input type="text" value="subject" name = "major"> </td>
+        <td><input type="text" placeholder="Major" name = "major" required> </td>
       </tr>
     <tr>
-      <th> Introduction</th>
-      <td><textarea></textarea></td>
+      <th> Description </th>
+      <td><textarea cols="25" row="50" placeholder="Write a Description" name="groupDescription"></textarea></td>
     </tr>  
       
     <tr>
       <th> Location </th>
-        <td><input type="text" value="location" name = "meetingLocation"></td>
+        <td><input type="text" Placeholder="Location" name = "meetingLocation"></td>
     </tr>
       
     <tr>
         <th> Date </th>
-        <td> <input type="date" value="date" name = "meetingDate"></td>
+        <td> <input type="date" value="date" name = "meetingDate" required></td>
     </tr>  
       
       <tr>
         <th> Time </th>
-        <td> <input type="Time" value="Time" name = "meetingTime"></td>
+        <td> <input type="Time" value="Time" name = "meetingTime" required></td>
       </tr>
       <tr>
         <th>Public</th>

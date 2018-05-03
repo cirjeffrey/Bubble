@@ -12,6 +12,10 @@
         $major = mysqli_real_escape_string($db_connection, $_POST['major']);
         $private = mysqli_real_escape_string($db_connection, $_POST['pub/priv']);
         $isPrivate;
+        $date = mysqli_real_escape_string($db_connection, $_POST['meetingDate']);
+        $time = mysqli_real_escape_string($db_connection, $_POST['meetingTime']);
+        echo "$date $time";
+        /*
 
         if($private == "private"){
             $isPrivate = 1;
@@ -31,7 +35,7 @@
             //for checking name field !preg_match("/^[a-zA-Z]*$/", $name)
             
                 $sql = "INSERT INTO bGroup (groupCreator, groupMajor, groupSubjectClass, groupNumParticipants, isPrivate, isFull) 
-                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0');"; // isFull = 0 because group is never full when newly created
+                        VALUES ('$name', '$major', '$subj', '$numMem', '$isPrivate', '0',);"; // isFull = 0 because group is never full when newly created
                 //$result = mysqli_query($db_connection, $sql);
                 //$resultCheck = mysqli_num_rows($result);
                 mysqli_query($db_connection, $sql);
@@ -48,8 +52,12 @@
                 exit();
             
         }
+        */
     }
+    
     else{
         header("Location: ../Create.php?error");
         exit();
     }
+    
+    ?>

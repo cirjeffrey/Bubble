@@ -16,8 +16,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Made with Thimble</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Search Groups</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <style>
 	table{ border: 2px solid black;}

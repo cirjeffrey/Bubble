@@ -44,7 +44,7 @@ ul{
 li{
   float:left;
 }
-
+/*Please make this specific for navigator bar only it affects other divs*/
 div{
   float:right;
 }

@@ -74,7 +74,7 @@
       </tr>
     <tr>
       <th> Description </th>
-      <td><textarea cols="25" row="50" placeholder="Write a Description" name="groupDescription"></textarea></td>
+      <td><textarea cols="25" row="50" placeholder="I want to come together and get and cram all night before my final. Who's with me?" name="groupDescription"></textarea></td>
     </tr>  
       
     <tr>

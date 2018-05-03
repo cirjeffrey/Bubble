@@ -1,6 +1,6 @@
 <?php
  session_start();
-
+include_once "includes/dbh.inc.php";
  //redirect to login page if not logged in yet
  if(!isset($_SESSION['u_id'])){
   header("Location: ./login.html?please_log_in");
@@ -100,23 +100,28 @@
 <div class="card">
     <?php
         $uid = $_SESSION['u_id'];
-        echo "<h1>$uid</h1>"
-    ?>
-    
-   
-    <?php
-        $major = $_SESSION['u_major'];
-        echo "<p>$major</p>"
+        echo "<h1>$uid</h1>";
+		
+		
+		$sql = "SELECT * FROM buser WHERE idUsername='$uid'";
+		$select2 = mysqli_query($db_connection, $sql);
+		
+		while($row = mysqli_fetch_assoc($select2))
+		{
+			echo "<p><h3>Major: ".$row['userMajor']."</h3><h3>Member Since: ".$row['user_create_time']."</h3></p>";
+			
+		}
+        
     ?>
     <div>
-        <p>Groups Joined:</p>
+        <p><h2>Groups Joined:</h2></p>
         <?php
-            include_once "includes/dbh.inc.php";
+
             $uid = $_SESSION['u_id'];
             $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup ORDER BY join_time DESC";
             $select = mysqli_query($db_connection, $sql);
             while($row = mysqli_fetch_assoc($select)){
-                echo "<p>[".$row['idGroup']."]&nbsp[".$row['groupCreator']."]&nbsp&nbsp&nbsp<button>Quit&nbspGroup</button></p>";
+                echo "<p><h3>".$row['groupSubjectClass']."<h3><form action = 'viewgroup.php?gid=".$row['idGroup']."' method = 'POST'><td> <button name = 'join' type = 'submit' value = '".$row['idGroup']."'>View</button> </td></form> <button>Quit&nbspGroup</button></p>";
             }
             
         ?>

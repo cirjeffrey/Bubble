@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
+[title]
+{
+float:right;
+}
+
 body {
   text-align: center;
   background-color: gray;
@@ -45,9 +50,9 @@ li{
   float:left;
 }
 /*Please make this specific for navigator bar only it affects other divs*/
-div{
+/* div{
   float:right;
-}
+} */
 
 li a, .dropbtn
 {

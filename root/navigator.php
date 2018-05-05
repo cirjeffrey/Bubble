@@ -73,10 +73,10 @@
         <li><a href="FindSG.php">Find Group</a></li>
         <li><a href="#editGroup">Edit My Group</a></li>
         <li><a href="#about">About</a></li>
-        <div style="float:right" class="dropdown">
+        <div class="dropdown">
             <?php
             $uid = $_SESSION['u_id'];
-            echo "<a title="$uid" href='profile.php' class='dropbtn'>$uid</a>";
+            echo href='profile.php' class='dropbtn'>$uid</a>";
             ?>
             <div class="dropdown-content">
                 <a href="profile.php">My Profile</a>

@@ -66,7 +66,7 @@
 			echo "<div><table>";
 			while($row = mysqli_fetch_assoc($select))
 			{
-				echo nl2br("<tr><th width='15%'>".$row['author']."</th><td>".$row['date_posted']."\n".$row['comment']."\n\n</td></tr>");
+				echo nl2br("<tr><th width='15%'><a href=viewprofile.php?username=".$row['author'].">".$row['author']."</a></th><td>".$row['date_posted']."\n".$row['comment']."\n\n</td></tr>");
 			}
 			echo "</table></div>";
 		}

@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
-[title]
-{
-float:right;
-}
-
 body {
   text-align: center;
   background-color: gray;
@@ -70,6 +65,7 @@ li a:hover, .dropdown:hover, .dropbtn
 
 .dropdown
 {
+  float:right;
   display:inline-block;
 }
 

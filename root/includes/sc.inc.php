@@ -57,7 +57,7 @@ include "dbh.inc.php";
 			
 				<tr>
 					<td> ".$row['groupSubjectClass']." </td>
-					<td> <a href='#'>".$name."</a> </td>
+					<td> <a href='./viewprofile.php?username=".$userName['idUsername']."'>".$name."</a> </td>
 					<td> ".$row['groupNumParticipants']." </td>
 					<form action = 'viewgroup.php?gid=$gid' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>VIEW</button> </td></form>
 					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>

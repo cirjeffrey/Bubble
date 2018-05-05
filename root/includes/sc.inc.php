@@ -17,12 +17,16 @@ include "dbh.inc.php";
 	    while($row = mysqli_fetch_assoc($select)){
 			//this needs to be styled
 			$gid = $row['idGroup'];
+			$name = $row['groupCreator'];
+			$retrieveUsername = mysqli_query($db_connection,"SELECT buser.idUsername FROM buser INNER JOIN bjoin WHERE bjoin.idGroup = '$gid' AND buser.userFullname = '$name'");
+			//This variable is the username of the group creator
+			$userName = mysqli_fetch_assoc($retrieveUsername);
 			// copy the form part at end to add another button, change button name so u can access $_POST['buttonName'] on another php. also edit the action to link to the php to use.
 			echo "
 			
 			    <tr>
 				    <td> ".$row['groupSubjectClass']." </td>
-				    <td> ".$row['groupCreator']." </td>
+				    <td> <a href='#'>".$name."</a> </td>
 				    <td> ".$row['groupNumParticipants']." </td>
 					<form action = 'viewgroup.php?gid=$gid' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>VIEW</button> </td></form>
 					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>
@@ -44,12 +48,16 @@ include "dbh.inc.php";
 				break;
 			}
 			$gid = $row['idGroup'];
+			$name = $row['groupCreator'];
+			$retrieveUsername = mysqli_query($db_connection,"SELECT buser.idUsername FROM buser INNER JOIN bjoin WHERE bjoin.idGroup = '$gid' AND buser.userFullname = '$name'");
+			//This variable is the username of the group creator
+			$userName = mysqli_fetch_assoc($retrieveUsername);
 			// copy the form part at end to add another button, change button name so u can access $_POST['buttonName'] on another php. also edit the action to link to the php to use.
 			echo "
 			
 				<tr>
 					<td> ".$row['groupSubjectClass']." </td>
-					<td> ".$row['groupCreator']." </td>
+					<td> <a href='#'>".$name."</a> </td>
 					<td> ".$row['groupNumParticipants']." </td>
 					<form action = 'viewgroup.php?gid=$gid' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>VIEW</button> </td></form>
 					<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$gid'>JOIN</button> </td></form>

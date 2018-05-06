@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+body {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  background-color: #ecdc9e;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+
+.logo{
+  font-style: italic;
+  font-size: 10px;
+}
+
+form{
+  margin:50px; 
+}
+
+table{
+  border: 2px solid black;
+  background-color:rgba(233, 232, 226, 0.82);
+
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
+}
+main{
+  background-color:rgba(233, 232, 226, 0.82);
+}

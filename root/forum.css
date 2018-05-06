@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 body{
-	background-color:#fce9c0;
+	background-color: #ecdc9e;
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
 }
 header,h1{
-	background-color:#fef8ea;
+	background-color: #ecdc9e;
 }
 
 h4{

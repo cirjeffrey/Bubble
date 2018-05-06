@@ -11,91 +11,32 @@ include_once "includes/dbh.inc.php";
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            float: right;
-        }
-
-        .dropdown-content {
-            right: 0;
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 50px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 10px 12px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-        }
-
-        .title {
-            color: black;
-            font-size: 16px;
-        }
-
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #070;
-            text-align: center;
-            cursor: pointer;
-            width: 40%;
-            font-size: 18px;
-        }
-
-        button2 {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 4px;
-            color: red;
-            background-color: #FFEBE6;
-            text-align: center;
-            cursor: pointer;
-            width: 20%;
-            font-size: 14px;
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-
-        button:hover, a:hover {
-            opacity: 0.7;
-        }
-    </style>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="navigator.css">
 </head>
 <body>
 
 <h2 style="text-align:Left">&nbsp&nbsp&nbspUser Profile
-    <div class="dropdown">
-        <?php
+    <!--Copy this into index, create, find, forum, and maybe profile-->
+<ul>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="forum.php">Bulletin Board</a></li>
+        <li><a href="FindSG.php">Find Group</a></li>
+        <li><a href="#editGroup">Edit My Group</a></li>
+        <li><a href="#about">About</a></li>
+        <div class="dropdown">
+            <?php
             $uid = $_SESSION['u_id'];
-            echo "<span>$uid</span>"
-        ?>
-        <div class="dropdown-content">
-            <a href="FindSG.php">SearchGroup</a>
-            <a href="Create.php">CreateNewGroup</a>
-            <a href="includes/logout.inc.php?signout=true">Sign Out</a>
+            echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+            ?>
+            <div class="dropdown-content">
+                <a href="profile.php">My Profile</a>
+                <a href="#editProfile">Edit My Profile</a>
+                <a href="includes/logout.inc.php?signout=true">Log out</a>
+            </div>
         </div>
-    </div>
+    </ul>
+<!--____________________________________________________________-->
 </h2>
 <div class="card">
     <?php

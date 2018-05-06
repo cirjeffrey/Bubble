@@ -76,7 +76,7 @@
         <div class="dropdown">
             <?php
             $uid = $_SESSION['u_id'];
-            echo href='profile.php' class='dropbtn'>$uid</a>";
+            echo "<a href='profile.php' class='dropbtn'>$uid</a>";
             ?>
             <div class="dropdown-content">
                 <a href="profile.php">My Profile</a>

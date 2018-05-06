@@ -5,8 +5,10 @@
 	
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="forum.css" type="text/css" />
 	<title>Welcome to the Bubbles Bulletin Board</title></head>
 
@@ -15,7 +17,7 @@
 	<div>
 	<?php
 		displaytopic($_GET['tid']);
-		echo "<div><p>All Replies(".countreplies($_GET['tid']).") </p></div>";
+		echo "<div><h3>All Replies(".countreplies($_GET['tid']).") </h3></div>";
 		dispreplies($_GET['tid']);
 	?>
 	</div>

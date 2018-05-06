@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+body {  
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  background-color: #ecdc9e;
+}
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn,.signupbtn {
+  padding: 14px 20px;
+  font-family: 'Fredoka One', cursive;
+  float: left;
+  width: 50%;
+  font-weight:bolder;
+
+}
+
+.cancelbtn{
+  background-color: #f44336;
+}
+.signupbtn{
+  background-color: #0cc865;
+}
+
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  background-color:rgba(233, 232, 226, 0.82);
+
+}
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #D9D7D6;
+  padding-top: 50px;
+}
+/* Modal Content/Box */
+.modal-content {
+  max-width: 1000px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+
+button{
+  border-radius: 30px;
+}
+section  {
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  max-width: 300px;
+  height: 300px;
+  border: 3px solid black
+}
+
+#id01{
+  display:block;
+  background-color: #ecdc9e;
+
+}
+label{
+  font-weight:bold;
+}
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}

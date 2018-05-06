@@ -72,7 +72,7 @@
         <li><a href="forum.php">Bulletin Board</a></li>
         <li><a href="FindSG.php">Find Group</a></li>
         <li><a href="#editGroup">Edit My Group</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="about.php">About</a></li>
         <div class="dropdown">
             <?php
             $uid = $_SESSION['u_id'];

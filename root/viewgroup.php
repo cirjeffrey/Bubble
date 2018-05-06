@@ -11,8 +11,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="viewgroup.css">
-    <link rel="stylesheet" href="navigator.css">
+	<link rel="stylesheet" type="text/css" href="viewgroup.css">
+    <link rel="stylesheet" type="text/css" href="navigator.css">
 </head>
 <body>
 

@@ -2,7 +2,7 @@
  session_start();
  //redirect to login page if not logged in yet
  if(!isset($_SESSION['u_id'])){
-  header("Location: ./login.html?please_log_in");
+  header("Location: ./login.html?pleaseLogIn");
   exit();
  }
 ?>

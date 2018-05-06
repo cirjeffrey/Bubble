@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search Groups</title>
-    <link rel="stylesheet" href="table.css" type="text/css" />
+    <link rel="stylesheet" href="forum.css" type="text/css" />
 		<link rel="stylesheet" href="navigator.css" type="text/css" />
   </head>
   
@@ -52,41 +52,34 @@
 	<div class="topnav">
 		<form action = "FindSG.php" method = "POST">
 			<!-- add some text here like search by class/major/creator -->
+			<h2> Search by Class/Major/Creator </h2>
 			<input type="text" placeholder="Search..." name = "criteria"> <button type = "submit" name = "submit">Search</button>
 		</form>
 	</div>
-    <table>
+	
+    <table class = "searchTable">
     <!--<form action = "includes/join.inc.php" method = "POST">-->
 			
 		<tr>
 			<th> Class </th>
 			<th> Creator </th>
 			<th> Participants </th>
+			<th> View </th>
+			<th> Join </th>
 		</tr>
 		
 		<?php
-
 			//Display non full groups listed.
-		
 			include "includes/sc.inc.php";
 			
 		?>
-	
-		
-		
-		
-		
-		<th>
-			<th align="center"> Didn't find what you were looking for? </th>			
-		</th>
-		
-		<tr>
-			<td><input type="button" value="Create a Group" style="margin-left:240%;" onclick="window.location.href='Create.php'"> </td> 
-		</tr>
-
+	</table>
 		
     <!--</form>-->
-    </table>
+   		<h4> Didn't find what you were looking for? </h4>
+		
+		<input type="button" value="Create a Group" onclick="window.location.href='Create.php'"> 
+		
     </main>
     </body>
 </html>

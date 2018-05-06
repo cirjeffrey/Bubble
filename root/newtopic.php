@@ -4,7 +4,9 @@
 ?>
 
 <html>
-<head><title>Welcome to the Bubbles Bulletin Board</title></head>
+<head>
+	<link rel="stylesheet" href="forum.css" type="text/css" />
+	<title>Welcome to the Bubbles Bulletin Board</title></head>
 
 <body>
 	<div><h1><a href="./forum.php"> Bubbles Bulletin Board </a></h1></div>

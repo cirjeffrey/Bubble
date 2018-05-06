@@ -1,5 +1,4 @@
 <?php
-	
 	function display_topics()
 	{
 		include ('includes/dbh.inc.php');
@@ -8,7 +7,7 @@
 		
 		if(mysqli_num_rows($select) != 0)
 		{
-			echo "<table>";
+			echo "<table class = 'forumTable'>";
 			echo "<tr><th>Title</th><th>Posted By</th><th>Date Posted</th><th>Views</th><th>Replies</th></tr>";
 			
 			while ($row = mysqli_fetch_assoc($select)){
@@ -20,7 +19,7 @@
 		}
 		else 
 		{
-			echo "<p>There are no posts yet!! <a href='newtopic.php?'> add the very first post! </a></p>";
+			echo "<p>There are no posts yet!! </p>";
 		}
 	
 	}

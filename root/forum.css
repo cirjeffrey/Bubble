@@ -1,0 +1,27 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+body{
+	background-color:#fce9c0;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+}
+header{
+	background-color:#fef8ea;
+}
+.forumTable {
+    border-collapse: collapse;
+    width: 70%;
+	margin-left:auto; 
+    margin-right:auto;
+	background-color:#CDD375;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+th {
+    background-color: #1A4443;
+    color: #FAF223;
+}

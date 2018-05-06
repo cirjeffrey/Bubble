@@ -10,14 +10,16 @@
 ?>
 
 <html>
-<head><title>Welcome to the Bubbles Bulletin Board</title></head>
+<head>
+	<link rel="stylesheet" href="forum.css" type="text/css" />
+	<title>Bulletin Board</title></head>
 <body>
 
-	<div><h1><a href="./forum.php"> Bubbles Bulletin Board </a></h1></div>
+	<header><h1><a href="./forum.php"> Bubbles Bulletin Board </a></h1></header>
 		<div>
 			<?php display_topics();?>
 		</div>
-	</div>
+
 	
 	<?php
 		$uid = $_SESSION['u_id'];
@@ -26,6 +28,7 @@
 			echo "<div><p><a href='newtopic.php?'> add a new topic </a></p></div>";
 		}
 	?>
+	
 		
 
 </body>

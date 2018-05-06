@@ -14,7 +14,7 @@ h4{
 	text-align: center;
 }
 	
-.forumTable,.replyTable,.contentTable {
+.forumTable,.replyTable,.contentTable,.searchTable {
 	margin:50px; 
     border-collapse: collapse;
     width: 70%;
@@ -34,6 +34,7 @@ h4{
 }
 
 .commentTable,.postTable{
+	margin:50px; 
 	border:1px solid black;
 	margin-left:auto; 
     margin-right:auto;
@@ -46,11 +47,12 @@ th, td {
     padding: 8px;
 }
 
-.forumTable tr:nth-child(even),.replyTable tr:nth-child(even),.contentTable tr:nth-child(even), .repliesTable tr:nth-child(even){
+.forumTable tr:nth-child(even),.replyTable tr:nth-child(even),.contentTable tr:nth-child(even), 
+	.repliesTable tr:nth-child(even), .searchTable tr:nth-child(even){
 	background-color: #f2f2f2;
 }
 
-.forumTable th,.replyTable th,.contentTable th {
+.forumTable th,.replyTable th,.contentTable th, .searchTable th {
     background-color: #1A4443;
     color: #FAF223;
 }
@@ -65,7 +67,5 @@ th, td {
 	padding: 8px;
 }
 
-form{
-  margin:50px; 
-}
+
 

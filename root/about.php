@@ -18,17 +18,20 @@ exit();
 <body>
 
 <ul>
-<li><a class="active" href="#home">Home</a></li>
-<li><a href="#news">Bulletin Board</a></li>
-<li><a href="#search">Find Group</a></li>
-<li><a href="#Editgroup">Edit My Group</a></li>
-<li><a href="#about">about</a></li>
+<li><a class="active" href="index.php">Home</a></li>
+<li><a href="forum.php">Bulletin Board</a></li>
+<li><a href="FindSG.php">Find Group</a></li>
+<li><a href="#editGroup">Edit My Group</a></li>
+<li><a href="about.php">About</a></li>
 <div class="dropdown">
-<a href="#" class="dropbtn">User Name</a>
+<?php
+    $uid = $_SESSION['u_id'];
+    echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+    ?>
 <div class="dropdown-content">
-<a href="#">My Profile</a>
-<a href="#">Edit My Profile</a>
-<a href="#">Log out</a>
+<a href="profile.php">My Profile</a>
+<a href="#editProfile">Edit My Profile</a>
+<a href="includes/logout.inc.php?signout=true">Log out</a>
 </div>
 </div>
 </ul>

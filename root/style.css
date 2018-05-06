@@ -38,21 +38,17 @@ ul{
   margin:0;
   padding:0;
   overflow:hidden;
-  background-color:#0099ff;
+  background-color:#e8d176;
 }
 
 li{
   float:left;
 }
-/*Please make this specific for navigator bar only it affects other divs*/
-/* div{
-  float:right;
-} */
 
 li a, .dropbtn
 {
   display:inline-block;
-  color:white;
+  color:#49450a;
   text-align:center;
   padding:14px 16px;
   text-decoration:none;
@@ -60,7 +56,7 @@ li a, .dropbtn
 
 li a:hover, .dropdown:hover, .dropbtn
 {
-  background-color:#99c2ff;
+  background-color:#ecdfab;
 }
 
 .dropdown
@@ -73,7 +69,7 @@ li a:hover, .dropdown:hover, .dropbtn
 {
   display:none;
   position:absolute;
-  background-color:#00ccff;
+  background-color:#e8d176;
   min-width:160px;
   box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
   right:0;
@@ -87,7 +83,7 @@ li a:hover, .dropdown:hover, .dropbtn
   display:block;
 }
 
-.dropdown-content a:hover {background-color: #3399ff}
+.dropdown-content a:hover {background-color: #ecdfab}
 
 .dropdown:hover .dropdown-content
 {

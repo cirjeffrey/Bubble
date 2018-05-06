@@ -5,8 +5,10 @@
 	
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="forum.css" type="text/css" />
 	<title>Welcome to the Bubbles Bulletin Board</title></head>
 
@@ -29,7 +31,7 @@
 			displaytopic($_GET['tid']);
 		?>
 	</div>
-		<div>
+	<div>
 	<?php 
 			
 		#if user is logged in
@@ -40,5 +42,4 @@
 	?>
 	</div>
 </body>
-
 </html>

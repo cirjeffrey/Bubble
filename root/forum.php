@@ -9,10 +9,13 @@
 	
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="forum.css" type="text/css" />
-	<title>Bulletin Board</title></head>
+	<title>Bulletin Board</title>
+</head>
 <body>
 
 	<header><h1><a href="./forum.php"> Bubbles Bulletin Board </a></h1></header>
@@ -20,17 +23,14 @@
 			<?php display_topics();?>
 		</div>
 
-	
 	<?php
 		$uid = $_SESSION['u_id'];
 		if(isset($_SESSION['u_id']))
 		{
-			echo "<div><p><a href='newtopic.php?'> add a new topic </a></p></div>";
+			echo "<div><h4><a href='newtopic.php?'> Add a New Topic </a></h4></div>";
 		}
 	?>
 	
-		
-
 </body>
 
 </html>

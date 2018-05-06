@@ -11,65 +11,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<title> View Group</title>
-	<link rel="stylesheet" href="groupprofile.css">
-	
+	<link rel="stylesheet" href="viewgroup.css">
+    <link rel="stylesheet" href="navigator.css">
 </head>
 <body>
 
-<h2 class ="head" >&nbsp&nbsp&nbsp Group Page
-    <div class="dropdown">
-        <?php
+<ul>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="forum.php">Bulletin Board</a></li>
+        <li><a href="FindSG.php">Find Group</a></li>
+        <li><a href="#about">About</a></li>
+        <div class="dropdown">
+            <?php
             $uid = $_SESSION['u_id'];
-            echo "<span>$uid</span>"
-        ?>
-        <div class="dropdown-content">
-            <a href="FindSG.php">SearchGroup</a>
-            <a href="Create.php">CreateNewGroup</a>
-            <a href="includes/logout.inc.php?signout=true">Sign Out</a>
+            echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+            ?>
+            <div class="dropdown-content">
+                <a href="profile.php">My Profile</a>
+                <a href="#editProfile">Edit My Profile</a>
+                <a href="includes/logout.inc.php?signout=true">Log out</a>
+            </div>
         </div>
-    </div>
-</h2>
-<div class="card">
-   <div>
-      
+    </ul>
+<div>
         <?php
             include_once "includes/dbh.inc.php";
 			$sql = mysqli_query($db_connection, "SELECT * FROM bgroup WHERE idGroup =".$group."");
 			$row = mysqli_fetch_assoc($sql);
 			
-			echo nl2br("<div><tr>
-					<td><b>Group Subject: </b>".$row['groupSubjectClass']."\n </td>
-					<td><b>Group Creator: </b>".$row['groupCreator']."\n </td>
-					<td><b>Group Major: </b>".$row['groupMajor']."\n </td>
-					<td><b>Number of Participants: </b>".$row['groupNumParticipants']."\n </td>
-					<td><b>Description: </b>".$row['groupDescription']."\n </td>
-					<td><b>Date Created: </b>".$row['group_create_time']."\n </td>
-				</tr></div>");
-				
+			//converting time and date 
+			//into easier to read time and date
+			$meetTime = $row['meetingDateTime'];	
+			$time_in_12_hour_format = date("g:i a", strtotime($meetTime));
+			$meet_date = date("m-d-y", strtotime($meetTime));
 			$participants = mysqli_query($db_connection, "SELECT idUsername FROM bjoin WHERE idGroup =".$group."");
+			//==============
 			
-			echo "<h2>Participants</h2>";
+			echo "<h1 class='title'>".$row['groupSubjectClass']."</h1>";
 			
+			echo nl2br("<div class='group-info' id='card2'>
+					<h1>Group Info</h1>
+					<b>Group Creator: </b>".$row['groupCreator']."\n 
+					<b>Group Major: </b>".$row['groupMajor']."\n
+					<b>Number of Participants: </b>".$row['groupNumParticipants']."\n
+					<b>Description: </b>".$row['groupDescription']."\n
+					<b>Meet Time: </b> $time_in_12_hour_format\n
+					<b>Meet Date: </b> $meet_date\n </div>");
+			
+			echo "<div class='participants' id='card1'> <h2>Participants</h2>";
 			if (mysqli_num_rows($participants) != 0)
 			{	
 				echo "<div>";
 				while($result = mysqli_fetch_assoc($participants))
 				{
-					echo nl2br("<div>".$result['idUsername']."</div>");
+					echo nl2br($result['idUsername']);
 				}
+				echo "<form action = 'includes/join.inc.php' method = 'POST'><button name = 'join' type = 'submit' value = '$group' id='button'>JOIN</button></form>";
+
 				echo "</div>";
 				
 			}
-			
-			echo "<form action = 'includes/join.inc.php' method = 'POST'><td> <button name = 'join' type = 'submit' value = '$group'>JOIN</button> </td></form>";
-     
-        ?>
-		
-		
-    </div>
-
+			echo "</div>";
+			?>
 </div>
 
 </body>

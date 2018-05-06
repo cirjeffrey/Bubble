@@ -6,22 +6,66 @@ body{
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
 }
-header{
+header,h1{
 	background-color:#fef8ea;
 }
-.forumTable {
+
+h4{
+	text-align: center;
+}
+	
+.forumTable,.replyTable,.contentTable {
+	margin:50px; 
     border-collapse: collapse;
     width: 70%;
 	margin-left:auto; 
     margin-right:auto;
 	background-color:#CDD375;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
+.repliesTable{
+    border-collapse: collapse;
+    width: 40%;
+	margin-left:auto; 
+    margin-right:auto;
+	background-color:#CDD375;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.commentTable,.postTable{
+	border:1px solid black;
+	margin-left:auto; 
+    margin-right:auto;
+	background-color:#fef8ea;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
 th, td {
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
-th {
+
+.forumTable tr:nth-child(even),.replyTable tr:nth-child(even),.contentTable tr:nth-child(even), .repliesTable tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+.forumTable th,.replyTable th,.contentTable th {
     background-color: #1A4443;
     color: #FAF223;
 }
+
+.repliesTable th{
+    background-color: #fef8ea;
+    color: #FAF223;
+}
+
+.commentTable td,.postTable td{
+	text-align: center;
+	padding: 8px;
+}
+
+form{
+  margin:50px; 
+}
+

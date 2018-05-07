@@ -15,10 +15,10 @@ include_once "includes/dbh.inc.php";
     <link rel="stylesheet" href="navigator.css">
 </head>
 <body>
+	
 
-<h2 style="text-align:Left">&nbsp&nbsp&nbspUser Profile
     <!--Copy this into index, create, find, forum, and maybe profile-->
-<ul>
+	<ul>
         <li><a class="active" href="index.php">Home</a></li>
         <li><a href="forum.php">Bulletin Board</a></li>
         <li><a href="FindSG.php">Find Group</a></li>
@@ -35,8 +35,8 @@ include_once "includes/dbh.inc.php";
         </div>
     </ul>
 <!--____________________________________________________________-->
-</h2>
-<div class="card">
+	<h1>&nbsp&nbsp&nbspUser Profile </h1>
+	<div class="card">
     <?php
         $uid = $_SESSION['u_id'];
         echo "<h1>$uid</h1>";
@@ -60,7 +60,7 @@ include_once "includes/dbh.inc.php";
             $sql = "SELECT * FROM bgroup INNER JOIN bjoin WHERE bjoin.idUsername = '$uid' AND bjoin.idGroup = bgroup.idGroup ORDER BY join_time DESC";
             $select = mysqli_query($db_connection, $sql);
             while($row = mysqli_fetch_assoc($select)){
-                echo "<p><h3>".$row['groupSubjectClass']."<h3><form action = 'viewgroup.php?gid=".$row['idGroup']."' method = 'POST'><td> <button name = 'join' type = 'submit' value = '".$row['idGroup']."'>View</button> </td></form> <button>Quit&nbspGroup</button></p>";
+                echo "<p><h3>".$row['groupSubjectClass']."<h3><form action = 'viewgroup.php?gid=".$row['idGroup']."' method = 'POST'><td> <button name = 'join' type = 'submit' value = '".$row['idGroup']."'>View</button> </td></form></p>";
             }
             
         ?>
@@ -73,4 +73,6 @@ include_once "includes/dbh.inc.php";
 
 </body>
 </html>
+
+
 

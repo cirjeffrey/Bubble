@@ -43,7 +43,7 @@
         
         <h1>About Us</h1>
         <p>
-        We are a 6 people group called LFG 362, we are aim to solve your study problem.
+        We are a 6 people group called LFG-362, we aim to solve your study problems!
         </p>
     </body>
 </html>

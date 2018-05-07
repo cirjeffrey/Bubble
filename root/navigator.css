@@ -1,6 +1,7 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 
 /* css for navigator */
@@ -23,6 +24,8 @@ li a, .dropbtn
   text-align:center;
   padding:14px 16px;
   text-decoration:none;
+  font-family: 'Fredoka One', cursive;
+  font-size:18px;
 }
 
 li a:hover, .dropdown:hover, .dropbtn
@@ -52,6 +55,8 @@ li a:hover, .dropdown:hover, .dropbtn
   padding:12px 16px;
   text-decoration:none;
   display:block;
+  font-family: 'Fredoka One', cursive;
+  font-size:18px;
 }
 
 .dropdown-content a:hover {background-color: #ecdfab}
@@ -60,3 +65,4 @@ li a:hover, .dropdown:hover, .dropbtn
 {
   display:block;
 }
+

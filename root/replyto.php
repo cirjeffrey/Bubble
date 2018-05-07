@@ -15,7 +15,7 @@
 <body>
 
 <header>
-<h1> LOGO</h1>
+	<img src="header.png" height="170px">
 </header>
 
 <ul>

@@ -40,12 +40,6 @@
         </ul>
         
         <h1>About Us</h1>
-        <p>
-<<<<<<< HEAD
-        We are a 6 people group from class CPSC 362, we aim to solve your study problem.
-=======
-        We are a 6 people group called LFG-362, we aim to solve your study problems!
->>>>>>> b647531d891d7cb5d9e5e16c68b77820658c024a
-        </p>
+        <p> We are a 6 people group called LFG-362, we aim to solve your study problems!</p>
     </body>
 </html>

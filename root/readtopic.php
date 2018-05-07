@@ -10,7 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="forum.css" type="text/css" />
-<link rel="stylesheet" href="navigator.css" type="text/css" />
+	<link rel="stylesheet" href="navigator.css" type="text/css" />
 	<title>Welcome to the Bubbles Bulletin Board</title></head>
 
 <body>
@@ -37,7 +37,7 @@
 </ul>
 
 
-	<div><h1>Bubbles Bulletin Board</h1></div>
+	<div class = "bubbleTitle"><h1>Bubbles Bulletin Board</h1></div>
 	<div>
 	<?php
 		displaytopic($_GET['tid']);
@@ -53,3 +53,4 @@
 </div>
 </body>
 </html>
+

@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-    <h1> LOGO</h1>  
+    <img src="header.png" height="170px">
     </header>
 
     <!--Copy this into index, create, find, forum, and maybe profile-->
@@ -44,6 +44,7 @@
 <!--____________________________________________________________-->
 
   <main>  
+  <h2> Fill Out This Form To Create A Group</h2>
     <table>
     <form action = "includes/create.inc.php" method = "POST">
       <tr>

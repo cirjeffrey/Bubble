@@ -12,18 +12,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-<meta charset="utf-8">
-<link rel="stylesheet" href="forum.css" type="text/css"> 
-<link rel="stylesheet" href="style1.css" type="text/css" >
-<link rel="stylesheet" href="navigator.css" type="text/css" />
-<title>Bulletin Board</title>
-=======
     <meta charset="utf-8">
     <link rel="stylesheet" href="forum.css" type="text/css" />
     <link rel="stylesheet" href="navigator.css" type="text/css" />
     <title>Bulletin Board</title>
->>>>>>> b647531d891d7cb5d9e5e16c68b77820658c024a
 </head>
 <body>
 

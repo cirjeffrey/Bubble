@@ -20,20 +20,18 @@
 </header>
 
 <ul>
-<li><a class="active" href="index.php">Home</a></li>
-<li><a href="forum.php">Bulletin Board</a></li>
-<li><a href="FindSG.php">Find Group</a></li>
-<li><a href="#editGroup">Edit My Group</a></li>
-<li><a href="about.php">About</a></li>
+	<li><a class="active" href="index.php">Home</a></li>
+	<li><a href="forum.php">Bulletin Board</a></li>
+	<li><a href="FindSG.php">Find Group</a></li>
+	<li><a href="about.php">About</a></li>
 <div class="dropdown">
 <?php
     $uid = $_SESSION['u_id'];
     echo "<a href='profile.php' class='dropbtn'>$uid</a>";
     ?>
 <div class="dropdown-content">
-<a href="profile.php">My Profile</a>
-<a href="#editProfile">Edit My Profile</a>
-<a href="includes/logout.inc.php?signout=true">Log out</a>
+	<a href="profile.php">My Profile</a>
+	<a href="includes/logout.inc.php?signout=true">Log out</a>
 </div>
 </div>
 </ul>

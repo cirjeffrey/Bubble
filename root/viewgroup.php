@@ -20,7 +20,7 @@
         <li><a class="active" href="index.php">Home</a></li>
         <li><a href="forum.php">Bulletin Board</a></li>
         <li><a href="FindSG.php">Find Group</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="about.php">About</a></li>
         <div class="dropdown">
             <?php
             $uid = $_SESSION['u_id'];
@@ -28,7 +28,6 @@
             ?>
             <div class="dropdown-content">
                 <a href="profile.php">My Profile</a>
-                <a href="#editProfile">Edit My Profile</a>
                 <a href="includes/logout.inc.php?signout=true">Log out</a>
             </div>
         </div>

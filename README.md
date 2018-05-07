@@ -1,5 +1,8 @@
 # LFG-CPSC-362
 
+FINAL REPORT
+https://docs.google.com/document/d/1on3Oy88F3-0eFoXdbVpMRaBBw_dOdKIZJoSN9eCfpJ4/edit?usp=sharing
+
 ## Bubble Install Document
 
 Since our website uses databases, php is needed to connect the database along with the front end of the website. In order to run files with php extension, an apache server is needed. 

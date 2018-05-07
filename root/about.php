@@ -13,13 +13,13 @@
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>About Us</title>
-<link rel="stylesheet" href="forum.css" type="text/css" />
+<link rel="stylesheet" href="style1.css" type="text/css" />
 <link rel="stylesheet" href="navigator.css" type="text/css" />
     </head>
     <body>
 
 <header>
-<h1> LOGO</h1>
+<img src="header.png" height="170px">
 </header>
 
         <ul>

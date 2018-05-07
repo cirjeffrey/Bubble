@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search Groups</title>
     <link rel="stylesheet" href="forum.css" type="text/css" />
+	<link rel="stylesheet" href="style1.css">
 		<link rel="stylesheet" href="navigator.css" type="text/css" />
   </head>
   

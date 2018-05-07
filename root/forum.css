@@ -1,12 +1,16 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+
 body{
 	background-color: #ecdc9e;
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
+	color: #444;
 }
-header,h1{
+header{
 	background-color: #ecdc9e;
 }
 
@@ -22,6 +26,7 @@ h4{
     margin-right:auto;
 	background-color:#CDD375;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	font-family: "Open Sans", sans-serif;
 }
 
 .repliesTable{
@@ -66,6 +71,14 @@ th, td {
 	text-align: center;
 	padding: 8px;
 }
+
+.bubbleTitle h1{
+	 font-family: 'Fredoka One', cursive;
+}
+
+
+
+
 
 
 

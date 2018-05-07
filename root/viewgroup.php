@@ -63,7 +63,7 @@
 				echo "<div>";
 				while($result = mysqli_fetch_assoc($participants))
 				{
-					echo nl2br($result['idUsername']);
+					echo nl2br("<div>".$result['idUsername']."</div>");
 				}
 				echo "<form action = 'includes/join.inc.php' method = 'POST'><button name = 'join' type = 'submit' value = '$group' id='button'>JOIN</button></form>";
 

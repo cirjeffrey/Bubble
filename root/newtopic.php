@@ -8,14 +8,14 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="forum.css" type="text/css" />
-<link rel="stylesheet" href="navigator.css" type="text/css" />
+	<link rel="stylesheet" href="navigator.css" type="text/css" />
 	<title>Welcome to the Bubbles Bulletin Board</title>
 </head>
 
 <body>
 
 <header>
-<h1> LOGO</h1>
+    <img src="header.png" height="170px">
 </header>
 
 <ul>
@@ -37,7 +37,7 @@
 
 
 
-	<div><h1>Bubbles Bulletin Board</h1></div>
+	<div class = "bubbleTitle"><h1>Add a New Topic</h1></div>
 		
 		<div>
 			<?php 
@@ -80,3 +80,4 @@
 </body>
 
 </html>
+

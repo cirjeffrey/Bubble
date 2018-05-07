@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create Group</title>
     <link rel="stylesheet" href="create.css">
+	<link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="navigator.css">
     
   </head>

@@ -13,7 +13,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="forum.css" type="text/css" />
+<link rel="stylesheet" href="forum.css" type="text/css"> 
+<link rel="stylesheet" href="style1.css" type="text/css" >
 <link rel="stylesheet" href="navigator.css" type="text/css" />
 <title>Bulletin Board</title>
 </head>

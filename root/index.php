@@ -13,12 +13,30 @@
     <title>Welcome Page</title>
     <meta charset="utf-8"/>
 	<link rel="stylesheet" href="homepage.css" type="text/css">
-
+<link rel="stylesheet" href="navigator.css" type="text/css" />
     <!--<meta name="viewport" content="width=device-width, initial-scale=1"/> Commented this out and nothing changes, if not needed: delete-->
-    
-   
+<style>
+ul{
+    background-color:#ecdc9e;
+}
+</style>
+
   </head>
   <body>
+
+<ul>
+<div class="dropdown">
+<?php
+    $uid = $_SESSION['u_id'];
+    echo "<a href='profile.php' class='dropbtn'>$uid</a>";
+    ?>
+<div class="dropdown-content">
+<a href="profile.php">My Profile</a>
+<a href="includes/logout.inc.php?signout=true">Log out</a>
+</div>
+</div>
+</ul>
+
     <header>
       <h2> Welcome</h2>
     </header>

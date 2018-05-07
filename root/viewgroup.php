@@ -55,7 +55,8 @@
 					<b>Number of Participants: </b>".$row['groupNumParticipants']."\n
 					<b>Description: </b>".$row['groupDescription']."\n
 					<b>Meet Time: </b> $time_in_12_hour_format\n
-					<b>Meet Date: </b> $meet_date\n </div>");
+					<b>Meet Date: </b> $meet_date\n 
+					<b>Location: </b> ".$row['groupLocation']."\n </div>");
 			
 			echo "<div class='participants' id='card1'> <h2>Participants</h2>";
 			if (mysqli_num_rows($participants) != 0)

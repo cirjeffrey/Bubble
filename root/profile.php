@@ -13,6 +13,7 @@ include_once "includes/dbh.inc.php";
 <head>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="navigator.css">
+    <link rel="stylesheet" type="text/css" href="viewprofile.css">
 </head>
 <body>
 	
@@ -37,6 +38,7 @@ include_once "includes/dbh.inc.php";
 <!--____________________________________________________________-->
 	<h1>&nbsp&nbsp&nbspUser Profile </h1>
 	<div class="card">
+    <img src="https://i.imgur.com/q9lARFU.jpg" alt="profile pic" class="profile-img" height="200px" width="200px">
     <?php
         $uid = $_SESSION['u_id'];
         echo "<h1>$uid</h1>";
